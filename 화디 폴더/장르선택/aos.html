@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AOS/MOBA란? - Game Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Home.css" />
+  <link rel="stylesheet" href="introduction.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-box"></div>
+        <span><a href="../Home.html" style="color: inherit; text-decoration: none">Game Developer</a></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="../Home.html">홈</a></li>
+        <li><a href="../ChooseGamesGenre.html">게임 취향 테스트</a></li>
+        <li><a href="../GamePlay.html">게임 해보기</a></li>
+        <li><a href="../GenreIntroduction.html" class="active">장르 소개</a></li>
+        <li><a href="../DevLog.html">개발 일지</a></li>
+      </ul>
+
+      <button id="theme-toggle" type="button">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="main-title-section">
+      <h1>AOS / MOBA란?</h1>
+      <p class="subtitle">
+        "팀워크로 쟁취하는 전술적 승리" - 집단 역학(Group Dynamics)과 대칭적 자원 경쟁의 정수
+      </p>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        🤯 AOS의 학술적 정의: 집단 역학과 비대칭적 역할
+      </h2>
+      <p class="section-desc">
+        AOS는 실시간 전략(RTS)의 전술적 시점과 액션 RPG의 캐릭터 컨트롤을 결합한 장르입니다. 초단기 협동 경쟁 스포츠로 정의됩니다.
+      </p>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">1</span> 비대칭적 역할과 사회적 상호작용
+          </h3>
+          <p>
+            플레이어들은 한 팀으로 묶이지만, 탱커, 딜러, 서포터 등 서로 완전히 다른 장단점을 가진 캐릭터를 조작합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">학술적 의의:</strong> 이로 인해 발생하는 역할 분담, 전략적 소통, 갈등 메커니즘은 인간-컴퓨터 상호작용(HCI) 분야의 주요
+            연구 대상입니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="mock-game">
+            <div class="isolated-box">🛡️ Tank</div>
+            <div class="isolated-box">⚔️ DPS</div>
+            <div class="isolated-box">🪄 Support</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">2</span> 3라인 공방과 거울형 레벨 디자인
+          </h3>
+          <p>
+            전장은 시각적·구조적으로 완벽한 대칭을 이룹니다. 상단(Top), 중단(Mid), 하단(Bottom)의 3개 경로가 기본 프레임워크입니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 전장의 안개와 중립 오브젝트는 아군과 적군이 특정 공간에서 '강제적으로 조우'하여 대규모 전투를 벌이도록
+            유도합니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="network-map">
+            <div class="node">🏠</div>
+            <div class="line horizontal"></div>
+            <div class="node active">⚔️</div>
+            <div class="line horizontal"></div>
+            <div class="node">🏠</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">3</span> 초단기 성장 루프와 스노우볼 제어
+          </h3>
+          <p>
+            수백 시간의 RPG 성장을 단 30~40분 안으로 압축하여 제공합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 작은 이득이 커지는 '스노우볼링'의 재미를 주되, '현상금 시스템' 같은 역전 메커니즘을 통해 수학적 균형을
+            잡습니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="mock-game">
+            <span>❄️</span>
+            <div class="arrow-right">➡️</div>
+            <span>⛄</span>
+            <div class="arrow-right">➡️</div>
+            <span>🏔️</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        📐 AOS 레벨 디자인 및 운영 공식
+      </h2>
+      <p class="section-desc">
+        플레이어의 전술적 판단을 극대화하고, 팀 간의 유기적인 협력을 끌어내는 공간적·시스템적 장치를 설계합니다.
+      </p>
+
+      <div class="flow-container">
+        <div class="flow-card">
+          <h4>1. 대칭적 맵 구조</h4>
+          <div class="flow-visual">⚖️</div>
+          <p>공정한 경쟁을 위한 거울형 지형 배치</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>2. 시야와 안개</h4>
+          <div class="flow-visual">🌫️</div>
+          <p>정보의 불확실성을 통한 심리전 유도</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>3. 정글과 오브젝트</h4>
+          <div class="flow-visual">🐉</div>
+          <p>강제적 조우와 팀파이트 발생 장치</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>4. 경제적 스노우볼링</h4>
+          <div class="flow-visual">💰</div>
+          <p>자원 선점을 통한 위계적 우위 확보</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>5. 역전 메커니즘</h4>
+          <div class="flow-visual">🔄</div>
+          <p>현상금 등을 통한 경기 긴장감 유지</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-actions">
+      <a href="../GenreIntroduction.html" class="back-btn">목록으로 돌아가기</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">
+        <div class="logo-box"></div>
+        <span>Game Developer</span>
+      </div>
+
+      <p>© 2024 Game Developer. All rights reserved.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#"><i class="fa-brands fa-discord"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </footer>
+  <script src="../theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+.genre-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.genre-header {
+  margin-bottom: 60px;
+}
+
+.genre-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.genre-header p {
+  font-size: 1.1rem;
+  color: var(--sub);
+}
+
+.genre-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.genre-card {
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.genre-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  opacity: 0.8;
+}
+
+.genre-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* 각 장르별 아이콘 색상 차별화 (선택 사항) */
+.genre-icon.roguelike { background-color: var(--primary); }
+.genre-icon.metroidvania { background-color: var(--primary); }
+.genre-icon.rpg { background-color: var(--primary); }
+.genre-icon.aos { background-color: var(--primary); }
+.genre-icon.crpg { background-color: var(--primary); }
+
+.genre-info {
+  flex-grow: 1;
+}
+
+.genre-info h2 {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.genre-info p {
+  font-size: 0.9rem;
+  color: var(--sub);
+}
+
+.learn-more {
+  background-color: var(--primary);
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.learn-more:hover {
+  opacity: 0.8;
+}
+
+/* 반응형 대응 */
+@media (max-width: 640px) {
+  .genre-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+  }
+  
+  .learn-more {
+    align-self: flex-end;
+  }
+}

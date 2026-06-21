@@ -1,0 +1,1423 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게임 취향 테스트</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ChooseGameGenre.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-box"></div>
+          <span>
+            <a href="Home.html" style="color: inherit; text-decoration: none">
+              Game Developer
+            </a>
+          </span>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="Home.html">홈</a></li>
+          <li>
+            <a href="ChooseGamesGenre.html" class="active">게임 취향 테스트</a>
+          </li>
+          <li><a href="GamePlay.html">게임 해보기</a></li>
+          <li><a href="GenreIntroduction.html">장르 소개</a></li>
+          <li><a href="DevLog.html">개발 일지</a></li>
+        </ul>
+
+        <button id="theme-toggle" type="button">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <h1 class="main-title">게임 취향 문항지</h1>
+      <p class="main-subtitle">
+        당신의 게임 취향을 더 잘 이해하기 위해 몇 가지 질문에 답해주세요.
+      </p>
+      <p class="main-notice">모든 문항은 선택 사항이며 결과에만 활용됩니다.</p>
+
+      <div class="card" id="test-card">
+        <form id="survey-form">
+          <div class="page-group active" data-page="1">
+            <div class="question-block">
+              <p class="question-text">
+                01. 하던 일이 중간에 완전히 꼬여서 처음부터 다시 시작해야 하는
+                상황입니다. 이때 내 마음은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q1" value="A" />
+                  <span
+                    >A. "오히려 좋아, 이번엔 다른 방법으로 더 완벽하게
+                    깨보겠어!" 바로 다시 부딪힌다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q1" value="B" />
+                  <span
+                    >B. "아까 오다가 놓친 다른 지름길이나 방법이 있었나?" 주변을
+                    되돌아본다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q1" value="C" />
+                  <span
+                    >C. "내가 아직 준비가 덜 됐나 봐." 차근차근 실력을 쌓아
+                    완벽해진 후에 다시 도전한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q1" value="D" />
+                  <span
+                    >D. "이번엔 운이 없었거나, 내 몸이 덜 풀렸네." 가볍게
+                    털어내고 다음 기회를 노린다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q1" value="E" />
+                  <span
+                    >E. "선택을 잘못했나? 아까 그 결정적인 순간으로 시간을
+                    되돌리고 싶다."</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                02. 매번 갈 때마다 내부 구조, 가구 배치, 만나는 사람들이 완전히
+                무작위(랜덤)로 바뀌는 장소가 있다면?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q2" value="A" />
+                  <span
+                    >A. 매번 어떻게 바뀔지 모르니 항상 긴장감 넘치고 신선해서
+                    질리지 않는다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q2" value="B" />
+                  <span
+                    >B. 장인정신으로 정교하게 잘 짜인 고정된 공간을 완벽하게
+                    정복하는 맛이 없어 아쉽다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q2" value="C" />
+                  <span
+                    >C. 계획에 없던 변수가 너무 많으면 머리가 아프고 피곤하게
+                    느껴진다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q2" value="D" />
+                  <span
+                    >D. 공간이 바뀌는 건 상관없고, 거기서 누구와 만나고
+                    소통하는지가 더 중요하다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q2" value="E" />
+                  <span
+                    >E. 무작위로 바뀌는 것보다, 내 선택과 행동에 따라 공간의
+                    운명이 바뀌는 게 좋다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                03. 지식이나 지위 같은 수치는 그대로지만, 내 '손재주나 순발력'이
+                늘어서 문제를 해결했을 때의 기분은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q3" value="A" />
+                  <span
+                    >A. 내 몸과 머리가 직접 성장한 게 온전히 느껴져서 짜릿한
+                    성취감을 느낀다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q3" value="B" />
+                  <span
+                    >B. 복잡하고 얽힌 문제를 내 감각으로 막힘없이 능숙하게
+                    풀어냈을 때 보람을 느낀다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q3" value="C" />
+                  <span
+                    >C. 눈에 보이는 영구적인 점수나 통장 잔고(보상)가 쌓이지
+                    않으면 결국 허무하다고 느낀다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q3" value="D" />
+                  <span
+                    >D. 내 실력을 확실하게 증명한 것 같아 뿌듯하며, 빨리 다른
+                    사람과 겨뤄보고 싶다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q3" value="E" />
+                  <span
+                    >E. 꼼수나 재치 있는 아이디어로 시스템을 역이용해 문제를
+                    쉽게 해결했을 때 짜릿하다.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="2">
+            <div class="question-block">
+              <p class="question-text">
+                04. 앞으로 배울 기술 중 하나를 선택할 수 있다면, 어떤 종류에
+                가장 끌리나요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q4" value="A" />
+                  <span
+                    >A. 지금 가진 장비들과 엮였을 때 기상천외한 마술 같은 효과를
+                    내는 '특이한 기술'.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q4" value="B" />
+                  <span
+                    >B. 이동 속도가 빨라지거나 남들이 못 가는 높은 곳을 갈 수
+                    있게 해주는 '이동 기술'.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q4" value="C" />
+                  <span
+                    >C. 기본 체력이나 근력을 확실하게 올려주어 나를 튼튼하게
+                    만드는 '안전한 기술'.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q4" value="D" />
+                  <span
+                    >D. 결정적인 순간에 상대를 제압하거나 판도를 단번에 뒤집을
+                    수 있는 '강력한 한 방 기술'.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q4" value="E" />
+                  <span
+                    >E. 말재주를 키워 상대를 설득하거나 주변 환경을 내 맘대로
+                    조작하는 '상황 해결형 기술'.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                05. 마침내 긴 프로젝트나 목표를 완수해 결말(엔딩)을 본 직후,
+                내가 보일 행동은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q5" value="A" />
+                  <span
+                    >A. "다음엔 완전 다른 콘셉트나 더 높은 난이도로 도전해
+                    볼까?" 하며 곧장 다음 판을 준비한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q5" value="B" />
+                  <span
+                    >B. "아직 이 세계에 내가 안 가본 숨겨진 장소가 있을 거야"
+                    하며 다시 돌아가 구석구석 뒤진다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q5" value="C" />
+                  <span
+                    >C. 만족스러운 결과물을 감상하며 감동을 느낀 뒤, 남은 자잘한
+                    수집품들을 정리한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q5" value="D" />
+                  <span
+                    >D. 내 최종 기록이나 등급을 확인하고, 곧바로 다음 경쟁
+                    상대를 찾아 나선다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q5" value="E" />
+                  <span
+                    >E. "만약 그때 다른 선택을 했다면 결말이 어떻게 변했을까?"
+                    궁금해서 다른 선택지를 골라본다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                06. 지독하게 풀리지 않던 상황을 마침내 극복했을 때, 나를
+                움직이게 만든 가장 큰 원동력은 무엇인가요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q6" value="A" />
+                  <span
+                    >A. "이 꼬여있는 난제를 내 손으로 기어코 풀고 말겠다"는
+                    오기와 집념.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q6" value="B" />
+                  <span
+                    >B. "이 장벽 너머에 도대체 어떤 새로운 세상이 펼쳐질까?"
+                    하는 순수한 호기심.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q6" value="C" />
+                  <span
+                    >C. "이 이야기의 끝에 도대체 어떤 결말이 기다리고 있을까?"
+                    하는 스토리에 대한 몰입감.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q6" value="D" />
+                  <span
+                    >D. "남들보다 내가 더 우위에 서서 기필코 이기겠다"는 강한
+                    경쟁심.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q6" value="E" />
+                  <span
+                    >E. "내 지능적인 전략과 선택이 맞아떨어졌다"는 지적
+                    만족감.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="3">
+            <div class="question-block">
+              <p class="question-text">
+                07. 가던 길에 지금의 내 능력으로는 절대 열 수 없거나 넘어갈 수
+                없는 굳게 닫힌 장벽을 만났을 때 나의 반응은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q7" value="A" />
+                  <span
+                    >A. "나중에 우연히 해결책을 찾겠지" 하고 쿨하게 돌아서서
+                    다른 재미있는 일을 찾는다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q7" value="B" />
+                  <span
+                    >B. 위치를 정확히 기억해 두었다가, 새로운 도구를 얻으면 가장
+                    먼저 이곳으로 다시 돌아온다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q7" value="C" />
+                  <span
+                    >C. 주변 사람들에게 말을 걸어보거나 힌트가 될 만한 단서,
+                    일지 등을 추적한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q7" value="D" />
+                  <span
+                    >D. "이 뒤에 중요한 목적지가 있나?" 생각하며 우회하거나
+                    빠르게 부술 다른 방법을 찾는다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q7" value="E" />
+                  <span
+                    >E. 주변에 있는 사물들을 쌓아 올리거나 부수어서 어떻게든
+                    넘어갈 기발한 꼼수를 고민한다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                08. 정교하고 세밀하게 타이밍을 맞춰 함정을 피하거나 날아오는
+                물체를 피하는 순발력 싸움은 어떤가요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q8" value="A" />
+                  <span
+                    >A. 실수해서 다시 하더라도, 손맛이 쫄깃하고 내 반응 속도로
+                    돌파하는 과정 자체가 즐겁다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q8" value="B" />
+                  <span
+                    >B. 복잡한 장애물을 내 손가락 감각으로 멋지게 파해하고 다음
+                    지역으로 넘어갈 때 쾌감이 크다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q8" value="C" />
+                  <span
+                    >C. 그런 순발력 요구는 피곤하다. 내 맷집이나 체력을 키워
+                    든든하게 버티는 게 편하다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q8" value="D" />
+                  <span
+                    >D. 멈춰있는 장애물과 싸우는 것보다 실시간으로 반응하는
+                    살아있는 상대와 심리전을 벌이는 게 좋다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q8" value="E" />
+                  <span
+                    >E. 바쁘게 손을 움직이는 것보다는, 바둑을 두듯 한 수 한 수
+                    차분히 생각할 시간이 주어지는 게 좋다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                09. 지도나 다이어리의 공백을 빈틈없이 전부 채우거나 수집률
+                100%를 완성하는 것에 대한 나의 생각은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q9" value="A" />
+                  <span
+                    >A. 목적지까지 최단 거리로 가면서 눈앞의 과제들을 해결하는
+                    것만으로도 충분하다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q9" value="B" />
+                  <span
+                    >B. 흐릿한 공백이 남아있으면 신경 쓰인다. 구석구석 다
+                    뒤져서라도 완벽히 채워야 직성이 풀린다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q9" value="C" />
+                  <span
+                    >C. 메인 목적지와 동선에 맞는 곳 위주로 효율적으로 움직이며
+                    분위기를 즐긴다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q9" value="D" />
+                  <span
+                    >D. 지도를 채우는 것보다 상대방의 움직임을 파악하고 내
+                    영역을 넓히는 게 훨씬 우선이다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q9" value="E" />
+                  <span
+                    >E. 지도의 수치보다는 그 공간에 배치된 물건이나 사람들과
+                    얼마나 깊게 상호작용할 수 있는지가 중요하다.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="4">
+            <div class="question-block">
+              <p class="question-text">
+                10. 주변에 사람이 거의 없고, 쓸쓸하고 묘한 분위기의 배경 음악과
+                소리만 가득한 고독한 공간이라면?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q10" value="A" />
+                  <span
+                    >A. 고독함 속에서 오롯이 내 눈앞의 과제와 생존에만 몰입할 수
+                    있어 오히려 집중이 잘 된다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q10" value="B" />
+                  <span
+                    >B. 이 황량하고 폐쇄적인 공간에 어떤 거대한 비밀과 고대
+                    유적이 숨겨져 있을지 가슴이 웅장해진다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q10" value="C" />
+                  <span
+                    >C. 대화할 상대가 없으면 세계에 몰입하기 어렵고 외로운
+                    느낌이 들어 금방 지루해진다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q10" value="D" />
+                  <span
+                    >D. 배경의 감성은 중요하지 않다. 오직 친구들과의 실시간
+                    소통และ 정보 교환만 중요하다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q10" value="E" />
+                  <span
+                    >E. 글이나 대사가 너무 적으면 상황을 깊이 이해하기 힘들어
+                    매력이 반감된다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                11. 새로운 이동 능력(높이 뛰기, 순간 대시 등)이 생겼을 때 내가
+                느끼는 가장 큰 기쁨은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q11" value="A" />
+                  <span
+                    >A. 위험한 상황이나 적들의 공격을 유연하고 화려하게 피해 갈
+                    수 있어서 좋다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q11" value="B" />
+                  <span
+                    >B. "이제 예전에 높아서 못 가던 그 언덕 위를 가볼 수
+                    있겠구나!" 하며 설렌다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q11" value="C" />
+                  <span
+                    >C. 내 캐릭터가 기술적으로 완성되고 체급이 한 단계 올라간 것
+                    같아 만족스럽다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q11" value="D" />
+                  <span
+                    >D. 상대와의 쫓고 쫓기는 추격전 상황에서 화려한 움직임으로
+                    따돌릴 수 있어 신난다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q11" value="E" />
+                  <span
+                    >E. 전투 시 지형적 우위(높은 곳 선점 등)를 점할 수 있는
+                    전술적 카드가 늘어나서 기쁘다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                12. "여기서 도대체 어디로 가야 하지?" 길을 잃고 한참을 헤매는
+                상황에 직면했을 때 나의 성향은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q12" value="A" />
+                  <span
+                    >A. 헤매는 과정에서 마주치는 뜻밖의 돌발 상황들과 우연히
+                    줍는 물건들을 챙기는 것도 재밌다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q12" value="B" />
+                  <span
+                    >B. 복잡하게 꼬여있는 미로를 스스로 분석하며 마침내 올바른
+                    출구를 찾아냈을 때 깊은 쾌감을 느낀다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q12" value="C" />
+                  <span
+                    >C. 목적지까지 가는 친절한 안내선이나 내비게이션이 없으면
+                    불친절하다고 느껴 짜증 난다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q12" value="D" />
+                  <span
+                    >D. 길을 헤매는 시간은 낭비다. 빨리 중심 격전지나 내
+                    홈그라운드로 복귀해서 자원을 모아야 한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q12" value="E" />
+                  <span
+                    >E. 주변의 단서(책, 쪽지, 흔적)들을 조사해 추리하여 길을
+                    찾아내는 과정이 흥미롭다.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="5">
+            <div class="question-block">
+              <p class="question-text">
+                13. 게임을 처음 시작할 때 내 분신이 될 캐릭터의 외형이나 이름을
+                정하는 데 드는 시간은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q13" value="A" />
+                  <span
+                    >A. 어차피 진행하다 보면 계속 바뀔 테니 기본 설정으로 최대한
+                    빠르게 시작한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q13" value="B" />
+                  <span
+                    >B. 오랫동안 화면에서 보게 될 모습이니 내 마음에 들 때까지
+                    꼼꼼하게 다듬는다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q13" value="C" />
+                  <span
+                    >C. 이 가상 세계의 주인공이 될 나 자신이므로 콘셉트와 정성을
+                    갈아 넣어 꾸민다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q13" value="D" />
+                  <span
+                    >D. 외형은 성능에 영향을 주지 않는다. 현재 가장 강력하거나
+                    효율 좋은 구성을 고른다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q13" value="E" />
+                  <span
+                    >E. 이 캐릭터의 성향(착함/나쁨)이나 출신 성분이 이야기에
+                    미칠 영향을 고려해 신중히 고른다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                14. 마을 주민들이 나에게 소소하고 다양한 개인적인 심부름들을
+                요청할 때 나의 행동은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q14" value="A" />
+                  <span
+                    >A. 보상으로 주는 아이템의 효과가 유용해 보인다면 골라서 몇
+                    개만 수행한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q14" value="B" />
+                  <span
+                    >B. 그 부탁을 들어주는 과정에서 가보지 못한 미지의 영역을
+                    추가로 가볼 수 있다면 기꺼이 수락한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q14" value="C" />
+                  <span
+                    >C. 인물들의 사연을 진지하게 감상하며, 이 세계의 진짜 이웃이
+                    된 것처럼 정성껏 도와준다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q14" value="D" />
+                  <span
+                    >D. 진행 효율에 별 도움이 안 된다면 과감히 무시하고 메인
+                    승부를 위해 초고속으로 성장한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q14" value="E" />
+                  <span
+                    >E. 이 부탁을 들어줬을 때 혹은 거절하거나 협박했을 때 일어날
+                    스토리의 변화를 계산해 본다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                15. 내가 게임을 하면서 "와, 이거 진짜 재밌다"라고 느끼는
+                본질적인 순간은 언제인가요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q15" value="A" />
+                  <span
+                    >A. 매번 색다른 장비와 시도로 불리한 난관을 내 아이디어로 깨
+                    나갈 때.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q15" value="B" />
+                  <span
+                    >B. 거대하고 정교하게 설계된 미지의 세계를 내 발로 구석구석
+                    여행할 때.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q15" value="C" />
+                  <span
+                    >C. 처음엔 보잘것없던 내 캐릭터가 시간과 노력의 축적으로
+                    엄청난 강자가 되었을 때.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q15" value="D" />
+                  <span
+                    >D. 실제 사람들과 호흡을 맞춰 역할을 분담하고, 고도의
+                    협동으로 상대를 제압할 때.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q15" value="E" />
+                  <span
+                    >E. 소설 속 주인공이 된 것처럼, 수많은 선택지를 통해 나만의
+                    이야기를 만들어 갈 때.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="6">
+            <div class="question-block">
+              <p class="question-text">
+                16. 아주 구하기 어려운 귀한 보물(장비)을 손에 넣었을 때 머릿속에
+                드는 생각은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q16" value="A" />
+                  <span
+                    >A. "이 특수한 효과를 쓰면 다음 난관을 훨씬 독특한 방식으로
+                    깰 수 있겠군!"</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q16" value="B" />
+                  <span
+                    >B. "이 장비에 어떤 재밌는 역사나 숨겨진 뒷이야기가
+                    적혀있는지 읽어봐야겠다."</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q16" value="C" />
+                  <span
+                    >C. 내 가방에 들어온 보물을 보며 깊은 소유욕과 든든한
+                    포만감을 느낀다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q16" value="D" />
+                  <span
+                    >D. "이 성능이면 이제 다른 사람들과 경쟁할 때 다 이길 수
+                    있겠다."</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q16" value="E" />
+                  <span
+                    >E. "이 아이템을 활용해 특정 인물을 협박하거나 대화 상황을
+                    날로 먹을 수 있을까?"</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                17. 영화 같은 중심 이야기가 아주 완벽하고 감동적으로
+                마무리되었을 때, 나의 감상이 무엇인가요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q17" value="A" />
+                  <span
+                    >A. "감동적이네. 자, 이제 이 시스템을 한계까지 시험하는
+                    하드코어 모드를 도전해 볼까?"</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q17" value="B" />
+                  <span
+                    >B. "큰 건 해결했네. 그럼 이제 세상에 남겨둔 미개척 구역들을
+                    마저 밝히러 가볼까?"</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q17" value="C" />
+                  <span
+                    >C. 소설 한 편을 끝낸 듯 뭉클해지며, 정들었던 내 캐릭터와
+                    헤어지는 게 아쉬워 여운에 잠긴다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q17" value="D" />
+                  <span
+                    >D. "스토리도 다 봤으니, 이제 질릴 걱정 없는 본격적인 유저
+                    대전 멀티플레이를 시작해 볼까?"</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q17" value="E" />
+                  <span
+                    >E. "만약 내가 악당의 편에 서거나 동료들을 배신했다면 어떻게
+                    끝났을지 다시 해봐야겠다."</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                18. 게임 속에서 나와 함께 다니는 동료들을 바라볼 때 나의
+                마음가짐은 어떤가요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q18" value="A" />
+                  <span
+                    >A. 싸울 때 내 공격력을 돕거나 대신 적의 시선을 끌어줄
+                    '효율적인 도구'.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q18" value="B" />
+                  <span
+                    >B. 이 친구들의 고향이나 개인적인 비밀을 알 수 있는 추가
+                    이야기의 열쇠.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q18" value="C" />
+                  <span
+                    >C. 단순한 데이터가 아니라 진짜 내 모험을 함께 헤쳐 나가는
+                    소중한 친구이자 동반자.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q18" value="D" />
+                  <span
+                    >D. 각자의 위치(공격/수비/지원)에서 자기 몫을 칼같이 해내야
+                    하는 든든한 팀원.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q18" value="E" />
+                  <span
+                    >E. 내 가치관이나 행동에 따라 나를 지지할 수도, 실망해
+                    떠나거나 적이 될 수도 있는 살아있는 인격체.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="7">
+            <div class="question-block">
+              <p class="question-text">
+                19. 우리 팀의 상황이 극도로 불리하게 돌아가며 패배가 확실시되는
+                절망적인 순간이 왔을 때 나의 행동은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q19" value="A" />
+                  <span
+                    >A. "어차피 뒤집기 힘들겠네. 이번 판은 대충 마무리하고 새
+                    조건으로 빨리 다음 판 시작하자."</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q19" value="B" />
+                  <span
+                    >B. 구석구석을 돌며 허점을 찌르거나 상황을 반전시킬 숨겨진
+                    틈새 루트가 있는지 찾는다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q19" value="C" />
+                  <span
+                    >C. 내가 지금까지 공들여 쌓아온 시간과 노력이 아까워서라도
+                    오기로 끝까지 버텨본다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q19" value="D" />
+                  <span
+                    >D. "아직 기회는 있다!" 동료들과 소통하며 단 한 번의 완벽한
+                    타이밍으로 역전을 노린다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q19" value="E" />
+                  <span
+                    >E. 주변의 환경 요소(다리를 끊거나 함정을 터뜨리는 등)를
+                    이용해 판을 흔들 방법을 찾는다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                20. 상상만 해도 기분 좋은 게임 속 최고의 순간은 어느 순간인가요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q20" value="A" />
+                  <span
+                    >A. 나쁜 조건 속에서도 완벽한 계획과 아이디어 조합으로
+                    강력한 적을 쓰러뜨렸을 때.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q20" value="B" />
+                  <span
+                    >B. 아무도 예상치 못한 숨겨진 장소나 비밀 통로를 내 직감으로
+                    찾아냈을 때.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q20" value="C" />
+                  <span
+                    >C. 오랜 시간 공들여 온 내 캐릭터의 성장과 대서사시가 완벽한
+                    결말을 맞이했을 때.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q20" value="D" />
+                  <span
+                    >D. 팽팽한 긴장감 속에서 내 완벽한 조작과 판단으로 팀을
+                    승리로 이끌었을 때.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q20" value="E" />
+                  <span
+                    >E. 텍스트로만 힌트가 주어졌던 복잡한 비밀이나 음모를 내
+                    추리로 완벽히 파헤쳤을 때.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                21. 실시간으로 다른 사람들과 소통하고 신호를 주고받으며 호흡을
+                맞춰야 하는 시스템에 대해 어떻게 생각하나요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q21" value="A" />
+                  <span
+                    >A. 나만의 속도와 집중력을 유지하고 싶을 때는 타인의 개입이
+                    번거롭게 느껴진다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q21" value="B" />
+                  <span
+                    >B. 남들과 발을 맞추는 것보다 나 혼자 조용히 세상을 탐험하는
+                    게 훨씬 편하다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q21" value="C" />
+                  <span
+                    >C. 타인과의 소통보다는 가상 세계의 인물들과 교감하며 깊은
+                    이야기에 빠져드는 게 좋다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q21" value="D" />
+                  <span
+                    >D. 이게 게임의 진정한 묘미다! 실제 사람들과 유기적으로
+                    호흡을 맞출 때 가장 신난다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q21" value="E" />
+                  <span
+                    >E. 타인과의 소통도 좋지만, 혼자 조용히 글을 정독하며 전략을
+                    구상하는 시간이 더 소중하다.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="8">
+            <div class="question-block">
+              <p class="question-text">
+                22. 나의 실력을 점수나 등급으로 매겨 실시간으로 보여주는 '순위
+                경쟁'을 마주했을 때 나의 태도는?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q22" value="A" />
+                  <span
+                    >A. 점수에는 관심 없고, 남들이 쓰지 않는 나만의 특이한
+                    조합을 실험하는 게 더 즐겁다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q22" value="B" />
+                  <span
+                    >B. 순위보다는 숨겨진 업적 달성률이나 도감 리스트를 100%
+                    채우는 게 훨씬 뿌듯하다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q22" value="C" />
+                  <span
+                    >C. 타인과의 비교는 스트레스만 줄 뿐, 혼자 느긋하게 세상을
+                    즐기는 게 좋다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q22" value="D" />
+                  <span
+                    >D. 내 등급이 한 단계씩 오를 때 최고의 성취감을 느끼며,
+                    실력으로 인정받고 싶다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q22" value="E" />
+                  <span
+                    >E. 정형화된 점수 경쟁 시스템은 금방 질린다. 내 마음대로
+                    선택할 수 있는 자유가 좋다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                23. 눈을 뗄 수 없이 실시간으로 바쁘게 손을 움직여야 하는 치열한
+                전투에 대한 나의 생각은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q23" value="A" />
+                  <span
+                    >A. 신체적인 순발력도 좋지만, 내가 사전에 짜둔 장비의
+                    영리함으로 극복하는 게 더 매력적이다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q23" value="B" />
+                  <span
+                    >B. 그런 정교한 손놀림은 까다로운 지형을 돌파하거나 함정을
+                    피할 때 쓰는 게 더 재밌다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q23" value="C" />
+                  <span
+                    >C. 실시간으로 너무 바쁘면 피곤하다. 내 공격 한 방이
+                    묵직하고 시원하게 박히는 직관적인 전투가 좋다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q23" value="D" />
+                  <span
+                    >D. 찰나의 순간에 오가는 스피드와 조작 싸움이야말로 게임의
+                    살아있는 진수다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q23" value="E" />
+                  <span
+                    >E. 바쁘게 손을 움직이는 것보다, 체스를 두듯 한 수 앞을
+                    내다보는 지적 전투가 훨씬 짜릿하다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                24. 내가 가장 선호하는 게임의 전반적인 시간 호흡은 어느
+                정도인가요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q24" value="A" />
+                  <span
+                    >A. 한 판당 30분~1시간 내외로 짧고 깔끔하게 끝나며, 매번
+                    다른 조건으로 반복하는 것.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q24" value="B" />
+                  <span
+                    >B. 하나의 거대한 맵을 온전히 다 파헤칠 때까지 수십 시간
+                    동안 깊이 파고드는 것.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q24" value="C" />
+                  <span
+                    >C. 한 편의 장대한 판타지 드라마처럼 끊김 없이 긴 시간 동안
+                    이야기가 이어지는 것.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q24" value="D" />
+                  <span
+                    >D. 한 판당 20~40분 정도로 짧고 굵게 집중하고, 매번 새로운
+                    상대를 만나는 것.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q24" value="E" />
+                  <span
+                    >E. 엄청나게 두꺼운 소설책 한 세트를 정독하듯, 인물들의
+                    대사를 하나하나 음미하며 즐기는 것.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="9">
+            <div class="question-block">
+              <p class="question-text">
+                25. 길을 가는데 완고한 문지기가 앞길을 막아섰습니다. 내가 가장
+                선호하는 해결 방식은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q25" value="A" />
+                  <span
+                    >A. 정면 파괴가 안 된다면, 내가 가진 무작위 소지품 중에
+                    변수를 만들 특이한 도구가 있는지 뒤진다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q25" value="B" />
+                  <span
+                    >B. 문지기 몰래 우회하거나 위에서 뛰어내릴 수 있는 숨겨진
+                    천장 통로나 개구멍을 찾는다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q25" value="C" />
+                  <span
+                    >C. 정공법으로 정면 대결을 펼쳐 내 힘으로 제압하거나, 몰래
+                    살금살금 숨어서 지나간다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q25" value="D" />
+                  <span
+                    >D. 동료들과 합을 맞춰 순식간에 문지기를 포위하고 무력화시킨
+                    뒤 신속하게 지나간다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q25" value="E" />
+                  <span
+                    >E. 문지기에게 말을 걸어 화려한 대화로 설득하거나, 약점을
+                    잡아 협박하거나, 매수해 길을 열게 한다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                26. 이야기를 진행하다가 생각할 거리가 많은 긴 대화창과 도덕적인
+                선택지들이 쏟아질 때 나의 반응은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q26" value="A" />
+                  <span
+                    >A. 대화는 흐름만 파악하고 빠르게 넘긴 뒤, 그 선택의 결과로
+                    내가 얻을 보상에 집중한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q26" value="B" />
+                  <span
+                    >B. 대화 내용 속에 이 지역의 역사적 단서나 숨겨진 보물의
+                    힌트가 있는지 집중해서 분석한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q26" value="C" />
+                  <span
+                    >C. 내 캐릭터의 기본 성향에 맞춘 무난한 대답을 고르고 빠르게
+                    다음 사냥터로 이동한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q26" value="D" />
+                  <span
+                    >D. 긴 설명은 지루하다. 빨리 대화를 끝내고 역동적인 실전
+                    화면으로 전환되기를 바란다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q26" value="E" />
+                  <span
+                    >E. 내가 정한 캐릭터의 신념에 완벽히 부합하는 대사 혹은 가장
+                    영리해 보이는 대답을 신중하게 고른다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                27. 싸우는 장소의 주변 환경(내리막길, 엄폐물, 날씨 등)을
+                활용하는 것에 대한 나의 생각은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q27" value="A" />
+                  <span
+                    >A. 그런 요소보다는 내가 이번 판에 무작위로 획득한 특수한
+                    능력들의 시너지가 더 중요하다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q27" value="B" />
+                  <span
+                    >B. 지형을 활용하는 것보다 맵 자체에 숨겨진 비밀 방이나 보물
+                    상자를 찾는 게 더 재미있다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q27" value="C" />
+                  <span
+                    >C. 지형의 유불리보다는 내 캐릭터의 레벨과 순수 스펙이 더
+                    믿음직스럽다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q27" value="D" />
+                  <span
+                    >D. 실시간으로 빠르게 움직이며 적의 공격을 피할 수 있는 넓은
+                    공간이 확보되었는지가 중요하다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q27" value="E" />
+                  <span
+                    >E. 전장의 높낮이, 폭발물, 벼랑 끝 위치 등을 완벽히 활용해
+                    적을 함정으로 끌어들이는 전술이 최고다.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="page-group" data-page="10">
+            <div class="question-block">
+              <p class="question-text">
+                28. 내 사소한 선택 하나 때문에 마을 하나의 운명이 바뀌거나
+                아끼는 인물의 성격이 뒤틀리는 현상을 마주한다면?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q28" value="A" />
+                  <span
+                    >A. "이 게임 진짜 촘촘하네!" 감탄하며, 다음 판에는 완전히
+                    반대로 선택해 보겠다고 다짐한다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q28" value="B" />
+                  <span
+                    >B. "내 선택에 따라 앞으로 갈 수 있는 지역의 지도 구조도
+                    바뀌나?" 확인해 본다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q28" value="C" />
+                  <span
+                    >C. 정해진 올바른 공략을 벗어나 내 완벽한 성장 계획이 꼬인
+                    것 같아 번거롭고 유쾌하지 않다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q28" value="D" />
+                  <span
+                    >D. 이야기가 어떻게 흘러가든 승패나 내 순위 기록에는 영향이
+                    없으므로 신경 쓰지 않는다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q28" value="E" />
+                  <span
+                    >E. 내가 내린 결정의 무게감에 소름이 돋으며, 진짜 살아있는
+                    세계를 여행하는 듯한 깊은 몰입감을 느낀다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                29. 길을 가다가 나를 위협하는 무법자 무리를 만났을 때, 내가
+                본능적으로 선택할 해결책은?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q29" value="A" />
+                  <span
+                    >A. 내 현재 장비 세팅의 위력을 시험해 볼 좋은 기회다. 곧바로
+                    무기를 꺼낸다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q29" value="B" />
+                  <span
+                    >B. 무법자들이 서 있는 위치 주변의 지형을 이용해 영리하게
+                    기습할 동선을 짠다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q29" value="C" />
+                  <span
+                    >C. 내 캐릭터의 높은 레벨을 믿고 우직하게 돌진해 힘으로 찍어
+                    누른다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q29" value="D" />
+                  <span
+                    >D. 동료들과 타겟을 정하고 일사불란하게 진형을 짜서 가장
+                    효율적인 합동 기술로 전멸시킨다.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q29" value="E" />
+                  <span
+                    >E. "나는 당신들의 두목과 아는 사이다"라는 식의 치밀한
+                    거짓말로 속이거나 대화로 타협을 시도한다.</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question-text">
+                30. 내가 게임을 하면서 '자유롭다'고 느낄 때, 가장 가치를 두는
+                부분은 무엇인가요?
+              </p>
+              <div class="options-vertical">
+                <label
+                  ><input type="radio" name="q30" value="A" />
+                  <span
+                    >A. 규칙에 얽매이지 않고 기상천외한 아이템 조합과 시스템적
+                    변수를 내 맘대로 만들어 낼 수 있는 자유.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q30" value="B" />
+                  <span
+                    >B. 가로막는 보이지 않는 벽 없이 온 세상을 내 발로 직접 걸어
+                    다니고 도달할 수 있는 공간적 자유.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q30" value="C" />
+                  <span
+                    >C. 시간과 노력을 투자해 내가 원하는 방향(전사, 마법사
+                    등)으로 캐릭터를 키우는 성장적 자유.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q30" value="D" />
+                  <span
+                    >D. 전장에서 내가 원하는 포지션을 선점하고 팀원들과 힘을
+                    합쳐 승리를 쟁취하는 전술적 자유.</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q30" value="E" />
+                  <span
+                    >E. 해결 방식, 대화의 방향, 주변 사물과의 상호작용을 오롯이
+                    내 신념과 상상력대로 결정하는 서사적 자유.</span
+                  ></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <button type="button" class="btn-prev" id="prev-btn">← 이전</button>
+            <span class="page-number" id="page-indicator">1 / 10</span>
+            <button type="button" class="btn-next" id="next-btn">다음 →</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card hidden" id="result-card">
+        <h2 class="result-title">🎯 당신의 게임 취향 결과</h2>
+        <div class="result-box">
+          <h3 class="result-type" id="result-type-text">타입 이름</h3>
+          <p class="result-desc" id="result-desc-text">
+            타입 설명이 여기에 출력됩니다.
+          </p>
+        </div>
+        <div class="card-footer" style="justify-content: center">
+          <button
+            type="button"
+            class="btn-next"
+            onclick="window.location.reload()"
+          >
+            테스트 다시하기
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-left">
+        <div class="footer-logo">
+          <div class="logo-box"></div>
+          <span>Game Developer</span>
+        </div>
+
+        <p>© 2024 Game Developer. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#"><i class="fa-brands fa-discord"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

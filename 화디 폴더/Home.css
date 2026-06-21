@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #121212;
+  --card: #2a475e;
+  --text: #f5f6f7;
+  --sub: #3b4b5a;
+  --header: #1b2838;
+  --primary: #66c0f4;
+  --line: #3b4b5a;
+  --logo: #f5f6f7;
+  --shadow: rgba(102, 192, 244, 0.35);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard";
+  transition: 0.3s;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar {
+  height: 80px;
+  padding: 0 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(27, 40, 56, 0.92);
+  backdrop-filter: blur(10px);
+
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box {
+  width: 34px;
+  height: 34px;
+  background: var(--logo);
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a.active {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+#theme-toggle {
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--card);
+  color: var(--text);
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#theme-toggle:hover {
+  background: var(--primary);
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+  height: 750px;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  background-image: url("자료들/6ee5df3553c6e126606af13dc510b226ad6254f8.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  margin-left: 120px;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: var(--primary);
+}
+
+.hero p {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  text-decoration: none;
+  color: #121212;
+
+  background: var(--primary);
+
+  padding: 18px 40px;
+  border-radius: 50px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px var(--shadow);
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.line {
+  width: 120px;
+  height: 3px;
+  background: var(--primary);
+
+  margin: 0 auto 40px;
+}
+
+.about p {
+  color: var(--sub);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+  padding: 40px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header);
+  color: #f5f6f7;
+  margin-top: 60px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+footer .logo-box {
+  background: #f5f6f7;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #f5f6f7;
+  font-size: 1.7rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   LIGHT MODE
+========================== */
+
+body.light {
+  --bg: #f5f6f7;
+  --card: #ffffff;
+  --text: #121212;
+  --sub: #3b4b5a;
+  --line: #d9dee4;
+  --logo: #1b2838;
+  --shadow: rgba(102, 192, 244, 0.45);
+}
+
+body.light .navbar {
+  background: rgba(27, 40, 56, 0.96);
+}
+
+body.light .nav-links a {
+  color: #f5f6f7;
+}
+
+body.light .nav-links a.active,
+body.light .nav-links a:hover {
+  color: var(--primary);
+}
+
+body.light footer {
+  background: var(--header);
+}
+
+body.light .footer-links a {
+  color: #f5f6f7;
+}
+
+/* Hero 영역은 항상 흰색 유지 */
+.hero h1,
+.hero p {
+  color: #f5f6f7;
+}
+
+/* 네비게이션 로고 글자도 항상 흰색 */
+.logo span {
+  color: #f5f6f7;
+}

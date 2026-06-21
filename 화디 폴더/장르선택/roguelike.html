@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그라이크란? - Game Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Home.css" />
+  <link rel="stylesheet" href="introduction.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-box"></div>
+        <span><a href="../Home.html" style="color: inherit; text-decoration: none">Game Developer</a></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="../Home.html">홈</a></li>
+        <li><a href="../ChooseGamesGenre.html">게임 취향 테스트</a></li>
+        <li><a href="../GamePlay.html">게임 해보기</a></li>
+        <li><a href="../GenreIntroduction.html" class="active">장르 소개</a></li>
+        <li><a href="../DevLog.html">개발 일지</a></li>
+      </ul>
+
+      <button id="theme-toggle" type="button">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="main-title-section">
+      <h1>로그라이크(Roguelike)란?</h1>
+      <p class="subtitle">
+        "죽음은 끝이 아니라 새로운 시작이다" - 무작위의 세계에서 펼쳐지는 극한의 선택과 성장
+      </p>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        🤯 로그라이크의 학술적 정의: 베를린 해석(Berlin Interpretation)
+      </h2>
+      <p class="section-desc">
+        2008년 국제 로그라이크 개발자 컨퍼런스(IRDC)에서 정립된 '베를린 해석'은 이 장르가 플레이어에게 주는 심리적 압박과 몰입의 원인을 학술적으로 규명했습니다.
+      </p>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">1</span> 영구적 죽음(Permadeath)과 손실 혐오
+          </h3>
+          <p>
+            일반적인 게임의 세이브/로드 시스템은 실패의 리스크를 지워주지만, 로그라이크는 이를 허용하지 않습니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 행동 경제학의 '손실 혐오' 심리를 극대화하여, 플레이어가 획득한 귀한 아이템이나 진척도를 잃지 않기 위해 매
+            순간 고도의 긴장감 속에서 최선의 선택을 내리도록 강제합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">학술적 의의:</strong> 실패의 대가가 무겁기 때문에, 반대로 성공했을 때의 카타르시스는 배가 됩니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="mock-game">
+            <div class="character">💀</div>
+            <div class="arrow-right">➡️</div>
+            <div class="character">👶</div>
+            <div class="isolated-box">Level 0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">2</span> 절차적 콘텐츠 생성(PCG)
+          </h3>
+          <p>
+            수학적 알고리즘(예: 퍼린 노이즈, 셀룰러 오토마타 등)을 통해 매판 맵, 몬스터, 아이템을 무작위로 생성합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 이는 플레이어가 레벨을 '외워서 깨는 것(Memorization)'을 원천 차단합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">학술적 의의:</strong> 학계에서는 이를 플레이어의 '규칙 이해도(Systemic Literacy)와 임기응변 능력'을 시험하는
+            장치로 정의합니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="map-grid">
+            <div class="grid-cell filled">🎲</div>
+            <div class="grid-cell filled">⚔️</div>
+            <div class="grid-cell empty">?</div>
+            <div class="grid-cell empty">?</div>
+            <div class="grid-cell filled">💎</div>
+            <div class="grid-cell empty">?</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">3</span> 비가역적 턴제 시스템
+          </h3>
+          <p>
+            고전 로그라이크의 기본 공식은 "내가 한 걸음 움직이면 세상도 한 걸음 움직인다"입니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 시간의 압박이 없는 대신, 단 한 번의 잘못된 조작이나 판단이 치명적인 결과로 이어지는
+            비가역적(Irreversible) 특성을 가집니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="mock-game">
+            <div class="node active">🚶</div>
+            <div class="line active"></div>
+            <div class="node">👹</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        📐 로그라이크 레벨 및 시스템 디자인 공식
+      </h2>
+      <p class="section-desc">
+        현대의 로그라이크(로그라이트)는 영구적 소멸의 고통을 '지식의 성장'과 '메타 프로그레션'으로 승화시킵니다.
+      </p>
+
+      <div class="flow-container">
+        <div class="flow-card">
+          <h4>1. 무작위 생성</h4>
+          <div class="flow-visual">🎲</div>
+          <p>알고리즘을 통한 매번 새로운 전장 설계</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>2. 극한의 선택</h4>
+          <div class="flow-visual">⚖️</div>
+          <p>하이 리스크 하이 리턴의 아이템/스킬 조합</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>3. 불가피한 죽음</h4>
+          <div class="flow-visual">💀</div>
+          <p>실패를 통한 시스템 메커니즘의 학습</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>4. 지식의 축적</h4>
+          <div class="flow-visual">🧠</div>
+          <p>플레이어 자체의 숙련도 및 인지적 성장</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>5. 메타 성장</h4>
+          <div class="flow-visual">🔓</div>
+          <p>영구 해금 요소를 통한 하이브리드 성장</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-actions">
+      <a href="../GenreIntroduction.html" class="back-btn">목록으로 돌아가기</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">
+        <div class="logo-box"></div>
+        <span>Game Developer</span>
+      </div>
+
+      <p>© 2024 Game Developer. All rights reserved.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#"><i class="fa-brands fa-discord"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </footer>
+  <script src="../theme.js"></script>
+</body>
+
+</html>

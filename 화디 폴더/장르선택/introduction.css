@@ -1,0 +1,445 @@
+/* 기본 초기화 및 배경 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 테마별 색상 변수 설정 */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  padding-bottom: 60px;
+  transition: background-color 0.3s, color 0.3s;
+
+  /* 기본 다크 테마 변수 */
+  --section-title-color: #f59e0b;
+  --highlight-color: #60a5fa;
+  --box-bg: #111827;
+  --box-border: #1f2937;
+  --diagram-bg: #1f2937;
+  --diagram-border: #374151;
+  --flow-visual-bg: #030712;
+  --flow-visual-border: #1f2937;
+  --text-muted: #9ca3af;
+  --title-color: #ffffff;
+}
+
+body.light {
+  /* 라이트 테마 변수 */
+  --section-title-color: #d97706;
+  /* 더 어두운 오렌지색 */
+  --highlight-color: #2563eb;
+  /* 더 어두운 파란색 */
+  --box-bg: #ffffff;
+  --box-border: #d9dee4;
+  --diagram-bg: #f3f4f6;
+  --diagram-border: #e5e7eb;
+  --flow-visual-bg: #f9fafb;
+  --flow-visual-border: #e5e7eb;
+  --text-muted: #4b5563;
+  --title-color: #111827;
+}
+
+/* 메인 레이아웃 컨테이너 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 40px;
+  /* 상단 고정 네비게이션 바 공간 확보 */
+}
+
+/* 메인 타이틀 */
+.main-title-section {
+  margin-bottom: 40px;
+}
+
+.main-title-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--title-color);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* 컨텐츠 공통 박스 구조 */
+.content-box {
+  background-color: var(--box-bg);
+  border: 1px solid var(--box-border);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  color: var(--section-title-color);
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* 핵심 이론 배치 (좌글 우그림) */
+.theory-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 35px;
+  align-items: stretch;
+}
+
+.theory-text {
+  flex: 1.3;
+}
+
+.theory-text h3 {
+  font-size: 1.15rem;
+  color: var(--title-color);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.theory-text h3 .num {
+  background-color: var(--primary);
+  color: #121212;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.theory-text p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.highlight-blue {
+  color: var(--highlight-color);
+  font-weight: 500;
+}
+
+/* 우측 가상 그래픽 영역 가공 */
+.theory-diagram {
+  flex: 1;
+  background-color: var(--diagram-bg);
+  border: 1px solid var(--diagram-border);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 160px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* 미니 목업 디자인 그래픽 요소들 */
+.mock-game {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.wall {
+  background-color: var(--diagram-border);
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.wall-passed {
+  background-color: var(--diagram-bg);
+  border: 2px dashed var(--diagram-border);
+  padding: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.network-map {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.node {
+  background: var(--diagram-border);
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.node.active {
+  background: rgba(102, 192, 244, 0.2);
+  border: 1px solid var(--primary);
+}
+
+.line {
+  height: 2px;
+  width: 30px;
+  background: var(--diagram-border);
+  transition: background-color 0.3s;
+}
+
+.line.active {
+  background: var(--primary);
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  gap: 5px;
+}
+
+.grid-cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.grid-cell.filled {
+  background-color: rgba(102, 192, 244, 0.2);
+  border: 1px solid var(--primary);
+}
+
+.grid-cell.empty {
+  border: 2px dashed var(--diagram-border);
+  color: var(--text-muted);
+  transition: border-color 0.3s, color 0.3s;
+}
+
+/* 5단계 공간 설계 프로세스 플로우 */
+.flow-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.flow-card {
+  background-color: var(--diagram-bg);
+  border: 1px solid var(--diagram-border);
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1;
+  height: 320px;
+  /* 고정 높이 */
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.flow-card h4 {
+  font-size: 1rem;
+  color: var(--title-color);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.flow-visual {
+  background-color: var(--flow-visual-bg);
+  height: 140px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  position: relative;
+  border: 1px solid var(--flow-visual-border);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.flow-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+  word-break: keep-all;
+}
+
+/* 미니 모형 요소들 */
+.m-char {
+  z-index: 2;
+}
+
+.m-cliff {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35%;
+  height: 50%;
+  background: var(--diagram-border);
+  border-top-left-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.m-reward {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  z-index: 3;
+}
+
+.m-wall {
+  background: var(--diagram-border);
+  width: 8px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transition: background-color 0.3s;
+}
+
+.m-path {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  font-size: 1.2rem;
+}
+
+.m-room {
+  width: 70%;
+  height: 60%;
+  border: 2px solid var(--diagram-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--box-bg);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.m-ability {
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 8px #a855f7);
+}
+
+.m-exit {
+  position: absolute;
+  right: 15%;
+  bottom: 15%;
+}
+
+.m-gate {
+  position: absolute;
+  right: 20%;
+  bottom: 25%;
+  font-size: 1.3rem;
+}
+
+.m-path-connect {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  opacity: 0.3;
+}
+
+.isolated-box {
+  border: 1px dashed #a855f7;
+  color: #c084fc;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+}
+
+/* 대표 게임 그리드 */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.game-item {
+  background-color: var(--diagram-bg);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid var(--diagram-border);
+  transition: transform 0.2s, border-color 0.2s, background-color 0.3s;
+}
+
+.game-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.game-img {
+  font-size: 2rem;
+  background: var(--box-bg);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.game-info h5 {
+  font-size: 0.95rem;
+  color: var(--title-color);
+  margin-bottom: 5px;
+}
+
+.game-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* 하단 액션 */
+.bottom-actions {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--primary);
+  color: #121212;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.back-btn:hover {
+  opacity: 0.9;
+}
+
+/* 반응형 모바일 대응 */
+@media (max-width: 768px) {
+  .theory-row {
+    flex-direction: column;
+  }
+
+  .flow-container {
+    flex-direction: column;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+    padding-bottom: 0;
+  }
+}

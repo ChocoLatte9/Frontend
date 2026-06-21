@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRPG란? - Game Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Home.css" />
+  <link rel="stylesheet" href="introduction.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-box"></div>
+        <span><a href="../Home.html" style="color: inherit; text-decoration: none">Game Developer</a></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="../Home.html">홈</a></li>
+        <li><a href="../ChooseGamesGenre.html">게임 취향 테스트</a></li>
+        <li><a href="../GamePlay.html">게임 해보기</a></li>
+        <li><a href="../GenreIntroduction.html" class="active">장르 소개</a></li>
+        <li><a href="../DevLog.html">개발 일지</a></li>
+      </ul>
+
+      <button id="theme-toggle" type="button">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="main-title-section">
+      <h1>CRPG(Computer Role-Playing Game)란?</h1>
+      <p class="subtitle">
+        "당신의 선택이 곧 세계의 운명이 된다" - 에이전시의 극대화와 정교한 시스템적 반작용
+      </p>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        🤯 CRPG의 학술적 정의: 에이전시(Agency)와 시뮬레이터
+      </h2>
+      <p class="section-desc">
+        CRPG는 플레이어의 선택에 완벽하게 반응하는 가상 세계 시뮬레이터로 분석됩니다. TRPG의 방대한 자유도를 디지털로 구현하려는 시도에서 탄생했습니다.
+      </p>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">1</span> 비선형적 문제 해결(Non-linear Problem Solving)
+          </h3>
+          <p>
+            CRPG는 동일한 목표에 대해 캐릭터의 빌드(Build)에 따른 무수한 해결책을 시스템적으로 보장합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 전투뿐만 아니라 은신, 뇌물, 설득, 협박 등 플레이어의 창의적 에이전시가 작동할 수 있는 다각도의 경로를
+            설계합니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="mock-game">
+            <div class="node">⚔️</div>
+            <div class="node">🕵️</div>
+            <div class="node">💬</div>
+            <div class="arrow-right">➡️</div>
+            <div class="node active">Goal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">2</span> 반작용적 세계(Reactive World)
+          </h3>
+          <p>
+            플레이어의 종족, 성별, 과거의 대화 기록 등을 모두 기억하고 반응하는 세계를 설계합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 정교한 '관계망 시뮬레이션'을 통해 특정 행동이 세계 전체에 미치는 인과관계를 체감하게 합니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="network-map">
+            <div class="node active">Choice</div>
+            <div class="line active"></div>
+            <div class="node">NPC A 😊</div>
+            <div class="line vertical"></div>
+            <div class="node">NPC B 😡</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">3</span> 실패의 내러티브화
+          </h3>
+          <p>
+            실패했을 때 단순히 '게임 오버'가 되는 것이 아니라, 실패 자체가 새로운 이야기의 줄기가 되도록 설계합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">학술적 의의:</strong> 주사위 굴리기 실패가 감옥 탈옥이나 새로운 동료와의 만남으로 이어지는 식의 '실패해도 계속되는 세계'를
+            추구합니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="mock-game">
+            <span>🎲 Fail</span>
+            <div class="arrow-right">➡️</div>
+            <span>⛓️ Prison Break</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        📐 CRPG 레벨 및 환경 디자인 공식
+      </h2>
+      <p class="section-desc">
+        레벨 디자이너들은 단순히 아름다운 맵을 넘어, 플레이어의 모든 수단에 반응하는 '상태 기계(State Machine)'적 공간을 창조합니다.
+      </p>
+
+      <div class="flow-container">
+        <div class="flow-card">
+          <h4>1. 다각도 경로 설계</h4>
+          <div class="flow-visual">🗺️</div>
+          <p>스킬셋에 따른 진입로 다변화</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>2. 상호작용적 오브젝트</h4>
+          <div class="flow-visual">⚙️</div>
+          <p>환경 요소를 통한 퍼즐 및 전투 해결</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>3. 평판 시스템 구축</h4>
+          <div class="flow-visual">🎭</div>
+          <p>선택에 따른 진영 간 관계 변화 반영</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>4. 퀘스트 분기점 배치</h4>
+          <div class="flow-visual">🌿</div>
+          <p>결과가 고정되지 않은 유기적 서사</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>5. 환경적 스토리텔링</h4>
+          <div class="flow-visual">📖</div>
+          <p>쪽지, 사물 등을 통한 세계관 확장</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPG란? - Game Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Home.css" />
+  <link rel="stylesheet" href="introduction.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-box"></div>
+        <span><a href="../Home.html" style="color: inherit; text-decoration: none">Game Developer</a></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="../Home.html">홈</a></li>
+        <li><a href="../ChooseGamesGenre.html">게임 취향 테스트</a></li>
+        <li><a href="../GamePlay.html">게임 해보기</a></li>
+        <li><a href="../GenreIntroduction.html" class="active">장르 소개</a></li>
+        <li><a href="../DevLog.html">개발 일지</a></li>
+      </ul>
+
+      <button id="theme-toggle" type="button">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="main-title-section">
+      <h1>RPG(Role-Playing Game)란?</h1>
+      <p class="subtitle">
+        "또 다른 나로 살아가는 즐거움" - 숫자로 추상화된 성장과 서사적 자아 동화
+      </p>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        🤯 RPG의 학술적 정의: 스키너 박스와 추상화된 정체성
+      </h2>
+      <p class="section-desc">
+        RPG는 인간의 '성장 욕구'와 '가상 세계에서의 역할 수행'을 수학적 수치로 치환한 장르입니다. 심리학적으로 가장 강력한 동기부여 메커니즘을 가집니다.
+      </p>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">1</span> 행동-보상 루프와 조작적 조건화
+          </h3>
+          <p>
+            행동주의 심리학의 '스키너 박스(Skinner Box)' 이론이 가장 정교하게 적용되어 있습니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 전투/퀘스트 -> 보상 -> 레벨 업 -> 더 강력한 적 도전으로 이어지는 루프를 통해 지속적인 도파민 분비를
+            유도합니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="network-map">
+            <div class="node active">⚔️</div>
+            <div class="line active">➡️</div>
+            <div class="node active">💰</div>
+            <div class="line active">➡️</div>
+            <div class="node active">🆙</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">2</span> 신체적 능력의 수학적 추상화
+          </h3>
+          <p>
+            RPG는 플레이어 본인의 실제 피지컬이 부족하더라도 캐릭터의 '레벨'과 '스탯'으로 장애물을 극복하게 돕습니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 피지컬의 한계를 '시간 투자와 전략'으로 대체할 수 있게 만드는 민주적인 디자인 구조입니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="mock-game">
+            <div class="isolated-box">Str 99</div>
+            <span>💪</span>
+            <div class="arrow-right">➡️</div>
+            <span>💥</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">3</span> 내러티브적 자아 동화(Identification)
+          </h3>
+          <p>
+            가상 세계관 내에서 플레이어의 선택이나 진척도에 따라 신분, 명성, 주변 인물들의 태도가 변하게 만듭니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">학술적 의의:</strong> 숫자의 상승을 넘어 '내가 이 세계의 영웅으로 성장하고 있다'는 강력한 서사적 대리 만족을 제공합니다.
+          </p>
+        </div>
+        <div class="theory-diagram">
+          <div class="mock-game">
+            <span>👤</span>
+            <div class="arrow-right">➡️</div>
+            <span>👑</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        📐 RPG의 레벨 디자인 공식: 플로우 이론(Flow Theory)
+      </h2>
+      <p class="section-desc">
+        플레이어의 성장 속도에 맞춰 난이도 곡선을 정교하게 설계하여 완벽한 몰입 지대에 머물게 합니다.
+      </p>
+
+      <div class="flow-container">
+        <div class="flow-card">
+          <h4>1. 동적 난이도 조절</h4>
+          <div class="flow-visual">📈</div>
+          <p>성장에 맞춘 몬스터 스탯 곡선 상승</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>2. 몰입 지대 유지</h4>
+          <div class="flow-visual">🌊</div>
+          <p>지루함과 불안 사이의 균형 설계</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>3. 장벽과 보상</h4>
+          <div class="flow-visual">🚧</div>
+          <p>도전을 통한 성장의 가시화</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>4. 사회적 역할 수행</h4>
+          <div class="flow-visual">🤝</div>
+          <p>NPC와의 상호작용 및 명성 변화</p>
+        </div>
+
+        <div class="flow-card">
+          <h4>5. 최종적 해방감</h4>
+          <div class="flow-visual">✨</div>
+          <p>강력해진 힘으로 느끼는 세계의 변화</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-actions">
+      <a href="../GenreIntroduction.html" class="back-btn">목록으로 돌아가기</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">
+        <div class="logo-box"></div>
+        <span>Game Developer</span>
+      </div>
+
+      <p>© 2024 Game Developer. All rights reserved.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#"><i class="fa-brands fa-discord"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </footer>
+  <script src="../theme.js"></script>
+</body>
+
+</html>

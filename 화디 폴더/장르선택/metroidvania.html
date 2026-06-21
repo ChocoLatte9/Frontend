@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>메트로배니아란? - Game Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Home.css" />
+  <link rel="stylesheet" href="introduction.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-box"></div>
+        <span><a href="../Home.html" style="color: inherit; text-decoration: none">Game Developer</a></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="../Home.html">홈</a></li>
+        <li><a href="../ChooseGamesGenre.html">게임 취향 테스트</a></li>
+        <li><a href="../GamePlay.html">게임 해보기</a></li>
+        <li><a href="../GenreIntroduction.html" class="active">장르 소개</a></li>
+        <li><a href="../DevLog.html">개발 일지</a></li>
+      </ul>
+
+      <button id="theme-toggle" type="button">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="main-title-section">
+      <h1>메트로 배니아란?</h1>
+      <p class="subtitle">
+        메트로 배니아란? 어쩌구 저쩌구 본문 내용 - 정리한 메트로 배니아의 장르
+        소개서 -
+      </p>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        🤯 메트로이드반니아(Metroidvania)의 학술적 구조와 핵심 이론
+      </h2>
+      <p class="section-desc">
+        메트로이드반니아는 게임학(Ludology)에서 '공간의 탐색'과 '아바타의
+        성장'이 어떻게 유기적으로 결합하는지 보여주는 가장 완벽한 예시로
+        연구됩니다.
+      </p>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">1</span> 능력 중심의 진행 제어 (Utility-Gated
+            Progression)
+          </h3>
+          <p>
+            일반적인 게임 디자인에서 문을 잠그는 요소는 단순한 소모성
+            열쇠(Key)나 스위치입니다. 하지만 메트로이드반니아에서는 플레이어의
+            영구적인 능력(Ability/Utility)이 열쇠의 역할을 대신합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">핵심 원리:</strong> 플레이어는 특정
+            장애물(높은 벽, 틈새, 원소 장벽)을 마주하며 시스템의 제한을
+            인지합니다. 이후 새로운 능력(2단 점프, 대시 등)을 획득함으로써 이
+            제한을 극복합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">학술적 의의:</strong> 이는 단순한
+            진척도 조장을 넘어, 능력을 얻음으로써 플레이어가 게임 내
+            세계(공간)를 인지하고 해석하는 패러다임 자체가 확장되는 경험을
+            제공합니다.
+          </p>
+        </div>
+        <div class="theory-diagram visual-box-1">
+          <div class="mock-game">
+            <div class="character">🏃</div>
+            <div class="wall">🧱</div>
+            <div class="arrow-right">➡️</div>
+            <div class="character jumped">🏃💨</div>
+            <div class="wall-passed">🧱</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">2</span> 비선형적 네트워크 레이아웃과 되돌아가기
+            (Backtracking)
+          </h3>
+          <p>
+            이 장르의 레벨 디자인은 시작점부터 종착점까지 일직선으로 이어지는
+            선형 구조를 거부합니다. 대신, 수많은 방과 통로가 거미줄처럼 얽힌
+            네트워크형 레이아웃을 채택합니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">되돌아가기(Backtracking)의 재해석:</strong>
+            과거에 방문했던 지역을 다시 돌아가는 행위는 일반적인 게임에서는
+            지루함을 유발합니다. 그러나 메트로이드반니아에서는 '성장의
+            액체감'을 주는 핵심 장치입니다. 과거엔 어떻게 통과했거나 갈 수
+            없었던 초기 지역을, 강력해진 기동성과 공격력으로 손쉽게 돌파하며
+            플레이어는 자신의 성장을 시각적·공간적으로 체감합니다.
+          </p>
+        </div>
+        <div class="theory-diagram visual-box-2">
+          <div class="network-map">
+            <div class="node active">🏃</div>
+            <div class="line horizontal active"></div>
+            <div class="node active">🔄</div>
+            <div class="line horizontal"></div>
+            <div class="node">💀</div>
+            <div class="line vertical"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theory-row">
+        <div class="theory-text">
+          <h3>
+            <span class="num">3</span> 카토그래피(Cartography, 지도학)와 탐색
+            동기 부여
+          </h3>
+          <p>
+            실시간으로 채워지는 맵 시스템은 단순히 길을 찾아주는 편의 기능이
+            아니라, 플레이어의 심리를 자극하는 디자인 요소입니다.
+          </p>
+          <p>
+            <strong class="highlight-blue">시각적 공백의 효과:</strong>
+            논문들은 지도에 표시된 '단절된 선'이나 '아직 밝혀지지 않은 빈
+            공간'이 플레이어에게 강한 호기심과 미지의 공간에 대한 탐색 욕구를
+            자극한다고 분석합니다. 게임 시스템이 퀘스트 마커로 직접 지시하지
+            않아도, 지도 구조 자체가 플레이어의 능동적인 이동을 유도하는
+            가이드라인이 됩니다.
+          </p>
+        </div>
+        <div class="theory-diagram visual-box-3">
+          <div class="map-grid">
+            <div class="grid-cell filled">🗺️</div>
+            <div class="grid-cell filled">🗺️</div>
+            <div class="grid-cell empty">?</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        📐 레벨 디자이너들이 사용하는 공간 설계 공식
+      </h2>
+      <p class="section-desc">
+        웰메이드 메트로이드반니아는 텍스트 형태의 튜토리얼을 지양하고, 오직
+        '공간의 배치'만으로 플레이어를 학습시킵니다.
+      </p>
+
+      <div class="flow-container">
+        <!-- 1. 보상의 시각화 -->
+        <div class="flow-card">
+          <h4>1. 보상의 시각화</h4>
+          <div class="flow-visual step-1">
+            <div class="m-char">🏃</div>
+            <div class="m-cliff"></div>
+            <div class="m-reward">🎁</div>
+          </div>
+          <p>갈 수 없는 절벽 너머로 매력적인 보상이나 다음 구역을 먼저 보여줍니다.</p>
+        </div>
+
+        <div class="flow-arrow-box">
+          <div class="blue-arrow">➡️</div>
+        </div>
+
+        <!-- 2. 차단 및 우회 -->
+        <div class="flow-card">
+          <h4>2. 차단 및 우회</h4>
+          <div class="flow-visual step-2">
+            <div class="m-char">🏃</div>
+            <div class="m-wall-thin"></div>
+            <div class="m-x">❌</div>
+            <div class="m-turn">⤵️</div>
+          </div>
+          <p>당장은 진입이 불가능하므로, 플레이어는 자연스럽게 다른 대안 경로를 탐색합니다.</p>
+        </div>
+
+        <div class="flow-arrow-box">
+          <div class="blue-arrow">➡️</div>
+        </div>
+
+        <!-- 3. 격리된 공간에서 능력 획득 -->
+        <div class="flow-card">
+          <h4>3. 격리된 공간에서 능력 획득</h4>
+          <div class="flow-visual step-3">
+            <div class="m-inner-frame">
+              <div class="m-char">🏃</div>
+              <div class="m-ability">✨</div>
+            </div>
+          </div>
+          <p>우회 끝에 새로운 능력을 얻게 되면, 시스템은 플레이어를 독립된 방에 격리합니다.</p>
+        </div>
+
+        <div class="flow-arrow-box">
+          <div class="blue-arrow">➡️</div>
+        </div>
+
+        <!-- 4. 능력 검증 및 탈출 -->
+        <div class="flow-card">
+          <h4>4. 능력 검증 및 탈출</h4>
+          <div class="flow-visual step-4">
+            <div class="m-char">🏃</div>
+            <div class="m-dash">💨</div>
+            <div class="m-door-block"></div>
+          </div>
+          <p>플레이어는 그 능력을 활용해야만 그 방을 탈출할 수 있도록 설계된 환경에서 자연스럽게 조작법을 체득합니다.</p>
+        </div>
+
+        <div class="flow-arrow-box">
+          <div class="blue-arrow">➡️</div>
+        </div>
+
+        <!-- 5. 지름길(Shortcut) 해금 -->
+        <div class="flow-card">
+          <h4>5. 지름길(Shortcut) 해금</h4>
+          <div class="flow-visual step-5">
+            <div class="m-link">🔗</div>
+            <div class="m-char">🏃</div>
+            <div class="m-lock">🔓</div>
+          </div>
+          <p>탈출 후 처음 막혔던 곳으로 돌아와 새로운 능력으로 지름길을 개방하는 순간, 분절되어 있던 두 공간이 하나로 연결되며 플레이어는 고도의 구조적 쾌감을 얻게 됩니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2 class="section-title">
+        🎮 이 장르의 대표적인 게임들
+      </h2>
+      <div class="games-grid">
+        <div class="game-item">
+          <div class="game-img">🧛</div>
+          <div class="game-info">
+            <h5>악마성 드라큘라 X 월하의 야상곡</h5>
+            <p>장르의 이름을 정립한 기념비적인 작품</p>
+          </div>
+        </div>
+        <div class="game-item">
+          <div class="game-img">🤖</div>
+          <div class="game-info">
+            <h5>슈퍼 메트로이드</h5>
+            <p>공간 탐색형 레벨 디자인의 정수를 보여주는 명작</p>
+          </div>
+        </div>
+        <div class="game-item">
+          <div class="game-img">🪲</div>
+          <div class="game-info">
+            <h5>할로우 나이트</h5>
+            <p>방대한 세계관과 독보적인 분위기를 자랑하는 인디 명작</p>
+          </div>
+        </div>
+        <div class="game-item">
+          <div class="game-img">🍎</div>
+          <div class="game-info">
+            <h5>셀레스트</h5>
+            <p>정교한 플랫포밍과 성장의 서사를 결합한 작품</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-actions">
+      <a href="../GenreIntroduction.html" class="back-btn">목록으로 돌아가기</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">
+        <div class="logo-box"></div>
+        <span>Game Developer</span>
+      </div>
+
+      <p>© 2024 Game Developer. All rights reserved.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#"><i class="fa-brands fa-discord"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </footer>
+  <script src="../theme.js"></script>
+</body>
+
+</html>
